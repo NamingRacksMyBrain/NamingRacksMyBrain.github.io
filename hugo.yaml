@@ -24,7 +24,6 @@ languages:
     languageName: "中文" # 展示的语言名
     weight: 1 # 权重
     taxonomies: # 分类系统
-      #category: categories
       tag: tags
     # https://gohugo.io/content-management/menus/#define-in-site-configuration
     menus:
@@ -35,9 +34,6 @@ languages:
         - name: 归档
           pageRef: archives/
           weight: 5
-        #- name: 分类
-        #  pageRef: categories/
-        #  weight: 10
         - name: 标签
           pageRef: tags/
           weight: 10
@@ -74,7 +70,7 @@ params:
     Title: "👋 Welcome to Duo's blog!"
     Content: >
   
-      - It records my growth and self-discovery!
+      - This is an adventure about self-discovery!
 
       - Feel free to comment anything you want :)  
 
