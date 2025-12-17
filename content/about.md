@@ -3,6 +3,38 @@ title: "关于"
 layout: "about"
 url: "/about/"
 summary: about
+date: 2025-01-20
 ---
 
-这里就可以写一些关于的相关信息了。
+## 你好 👋 
+我是 Duo，准确来说，是柴犬多多的朋友。这里是 Duo's Blog。
+&nbsp;
+
+&nbsp;
+
+### 关于这个博客
+
+- 记录我的学习与碎碎念
+- 希望能与志同道合的朋友交流
+&nbsp;
+
+&nbsp;
+
+### 关于我
+
+- 狗狗的生活哲学
+- 喜欢探索新事物
+- 努力成为一个快乐人类
+&nbsp;
+
+&nbsp;
+
+### 联系我
+
+- GitHub: [NamingRacksMyBrain](https://github.com/NamingRacksMyBrain)
+- 博客留言交流
+&nbsp;
+
+&nbsp;
+
+### 感谢访问！🙂
