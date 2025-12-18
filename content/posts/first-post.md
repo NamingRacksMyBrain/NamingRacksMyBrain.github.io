@@ -1,12 +1,16 @@
 +++
 date = '2025-12-17T14:31:20+08:00'
-title = '成功搭建个人博客！✔'
+title = '个人博客搭建'
 tags = ["里程碑"]
 +++
-
-昨天下午突发奇想，折腾一晚上以失败告终……但感谢遇到以下教程👇
+- 2025.12.17 14:31
+昨天下午突发奇想，折腾一晚以失败告终……但感谢教程👇
 [Hugo+PaperMod+Github Pages(win11)教程，](https://sonnycalcr.github.io/posts/build-a-blog-using-hugo-papermod-github-pages/)
 
 所以你现在可以看到这篇博客啦🎉✌
 
-访客功能很有意思，接下来试试看，敬请期待吧😄
+网站统计功能很有意思，敬请期待吧😄
+
+- 2025.12.18 11：06
+网站统计功能上线🎉
+Upcoming：单页浏览量
