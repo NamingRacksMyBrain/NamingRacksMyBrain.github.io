@@ -40,6 +40,9 @@ languages:
         - name: 搜索
           pageRef: search/
           weight: 20
+        - name: 网站统计
+          url: https://umami-blog-three.vercel.app/share/G87mmPXwOfautFzN
+          weight: 20
         - name: 关于
           pageRef: about/
           weight: 21
@@ -50,7 +53,7 @@ pagination:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: NamingRacksMyBrain
+  author: Duo
   defaultTheme: dark
   ShowShareButtons: false
   ShowReadingTime: true
@@ -67,9 +70,10 @@ params:
   DateFormat : "2006-01-02"
 
   homeInfoParams:
-    Title: "👋 Welcome to Duo's blog!"
+    Title: "👋 Hi there!"
     Content: >
-  
+      - Welcome to Duo's blog!
+
       - This is an adventure about self-discovery!
 
       - Feel free to comment anything you want :)  
@@ -89,6 +93,7 @@ params:
       # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
       keys: ["title", "permalink", "summary", "content"]
       includeMatches: true
+  
   # <a href="https://www.flaticon.com/free-icons/shiba-inu" title="shiba inu icons">Shiba inu icons created by Paul J. - Flaticon</a>
   assets:
       favicon: "favicon.png"
@@ -112,6 +117,13 @@ params:
     darkTheme: "dark"
     lang: "zh-CN"
     crossorigin: "anonymous"
+  
+  # 添加 Umami 分析配置
+  analytics:
+    umami:
+      enable: true
+      website_id: "929daa1b-bedf-4572-a243-c0a80ea475ac"
+      url: "https://umami-blog-three.vercel.app/Duo"
 
 # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
 outputs:
