@@ -1,6 +1,140 @@
-.post-content pre,
-code {
-  font-family: "Google Sans Code", monospace;
-  font-size: 1rem;
-  line-height: 1.2;
+/* 1. 引入 JetBrains Mono 字体 - 增加备用链接 */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* 2. 容器宽度和 Mac 风格 (保持你已经成功的布局) */
+.main, .post-single {
+    max-width: 800px !important;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1240px) {
+    .highlight {
+        margin-left: -100px !important;
+        margin-right: -100px !important;
+        width: calc(100% + 200px) !important;
+        max-width: none !important;
+    }
+}
+
+.highlight {
+    position: relative;
+    border-radius: 12px !important; 
+    margin: 30px 0 !important;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.4) !important; /* 加深阴影 */
+    background-color: #272822 !important; /* Monokai 经典背景色 */
+    overflow: hidden !important;
+}
+
+/* Mac 三色圆点 */
+.highlight::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    background: #ff5f56;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f; 
+    z-index: 10;
+}
+
+/* 针对 PaperMod 自带的复制代码按钮进行位置微调 */
+.highlight:hover .copy-code {
+    top: 10px !important;
+    right: 15px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px); /* 毛玻璃效果，很高级 */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* 3. 字体和字号：重点修复 */
+/* 移除 color: inherit，允许 Hugo 的内联样式控制颜色 */
+.post-content .highlight pre, 
+.post-content .highlight code,
+.post-content .highlight code span {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace !important;
+    font-size: 16px !important; /* 如果觉得小，可以改回 18px */
+    line-height: 1.6 !important;
+    letter-spacing: 0px !important; /* 修正字符间距 */
+}
+
+/* 内部间距调整 */
+.highlight pre {
+    padding: 50px 20px 20px 20px !important; /* 顶部多留点空间给圆点 */
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+/* 4. 行号美化 */
+.ln {
+    margin-right: 15px !important;
+    color: #75715e !important; /* Monokai 行号颜色 */
+    opacity: 0.5;
+    user-select: none;
+}
+
+/* 5. 任务列表 */
+.post-content ul li:has(input[type="checkbox"]) {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+}
+.post-content input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #a6e22e; /* 匹配 Monokai 的绿色 */
+}
+
+/* --- 代码块居中与宽度优化 --- */
+
+@media screen and (min-width: 1240px) {
+    .highlight {
+        /* 1. 设置你想要的宽度（比如比正文宽 200px） */
+        width: calc(100% + 200px) !important; 
+        
+        /* 2. 核心居中逻辑：先推到中间，再往回拉一半宽度 */
+        position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* 如果是小屏幕（手机），恢复正常宽度 */
+@media screen and (max-width: 1239px) {
+    .highlight {
+        width: 100% !important;
+        left: 0 !important;
+        transform: none !important;
+        margin: 20px 0 !important;
+    }
+}
+
+.highlight {
+    /* 保持你喜欢的样式 */
+    border-radius: 12px !important; 
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.4) !important;
+    background-color: #272822 !important; /* 或者 #282a36 */
+    overflow: hidden !important;
+}
+
+/* 别忘了 Mac 圆点也要跟着居中的容器走 */
+.highlight::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    background: #ff5f56;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f; 
+    z-index: 10;
 }

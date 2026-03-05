@@ -1,6 +1,6 @@
 baseURL: "https://NamingRacksMyBrain.github.io/" # 主站的 URL
 title: Duo's Blog # 站点标题
-copyright: "[©2025 Duo's Blog](https://NamingRacksMyBrain.github.io/)" # 网站的版权声明，通常显示在页脚
+copyright: "[©2026 Duo's Blog](https://NamingRacksMyBrain.github.io/)" # 网站的版权声明，通常显示在页脚
 theme: PaperMod # 主题
 languageCode: zh-cn # 语言
 
@@ -133,11 +133,15 @@ outputs:
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: true # 必须开启，否则你的任务列表复选框显示不出来
+    extensions:
+      taskList: true # 开启任务列表支持
   highlight:
-    noClasses: false
-    anchorLineNos: false
-    codeFences: true
-    lineNos: true
-    LineNumbersInTable: false
-    style: monokai
+    noClasses: true      # 建议保持 true，这样 CSS 覆盖最简单
+    codeFences: true     # 开启代码围栏支持
+    guessSyntax: true    # 自动识别语言
+    lineNos: true        # 显示行号
+    lineNumbersInTable: false # 设为 false，复制代码时不会带上行号（非常有用！）
+    style: dracula       # 选一个你喜欢的配色名（见上表）
+
+
